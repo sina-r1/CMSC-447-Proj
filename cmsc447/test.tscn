@@ -13,18 +13,251 @@ script = ExtResource("1_37kl0")
 color = Color(0.901961, 0.854902, 0.792157, 1)
 
 [node name="Map Sprite" type="Sprite2D" parent="Map"]
-position = Vector2(176, 405)
+position = Vector2(228, 384)
 scale = Vector2(0.065, 0.065)
 texture = ExtResource("2_8uh7m")
 
-[node name="MapNode" type="Node2D" parent="Map/Map Sprite"]
-position = Vector2(-246.154, -1661.54)
+[node name="ITE" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-1646.15, 753.846)
 script = ExtResource("3_6uqi0")
 
-[node name="ITE East Door" type="Node2D" parent="Map/Map Sprite"]
-position = Vector2(-1646.15, 538.462)
+[node name="ITE North 1" type="Node2D" parent="Map/Map Sprite/ITE"]
+position = Vector2(0.00390625, -215.384)
 script = ExtResource("3_6uqi0")
 
-[node name="ITE East Door2" type="Node2D" parent="Map/Map Sprite"]
-position = Vector2(-1646.15, 1000)
+[node name="ITE North 2" type="Node2D" parent="Map/Map Sprite/ITE"]
+position = Vector2(-184.615, -200)
+script = ExtResource("3_6uqi0")
+
+[node name="ITE East 1" type="Node2D" parent="Map/Map Sprite/ITE"]
+position = Vector2(215.385, -169.231)
+script = ExtResource("3_6uqi0")
+
+[node name="ITE East 2" type="Node2D" parent="Map/Map Sprite/ITE"]
+position = Vector2(215.385, 61.5386)
+script = ExtResource("3_6uqi0")
+
+[node name="ITE South 1" type="Node2D" parent="Map/Map Sprite/ITE"]
+position = Vector2(0.00012207, 261.539)
+script = ExtResource("3_6uqi0")
+
+[node name="ENG" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-1646.15, 215.385)
+script = ExtResource("3_6uqi0")
+
+[node name="ENG North 1" type="Node2D" parent="Map/Map Sprite/ENG"]
+position = Vector2(-30.769, -215.385)
+script = ExtResource("3_6uqi0")
+
+[node name="ENG East 1" type="Node2D" parent="Map/Map Sprite/ENG"]
+position = Vector2(200, 0)
+script = ExtResource("3_6uqi0")
+
+[node name="ENG West 1" type="Node2D" parent="Map/Map Sprite/ENG"]
+position = Vector2(-215.384, 0)
+script = ExtResource("3_6uqi0")
+
+[node name="ENG South 1" type="Node2D" parent="Map/Map Sprite/ENG"]
+position = Vector2(-15.3845, 215.385)
+script = ExtResource("3_6uqi0")
+
+[node name="M&P" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-676.923, 200)
+script = ExtResource("3_6uqi0")
+
+[node name="M&P North 1" type="Node2D" parent="Map/Map Sprite/M&P"]
+position = Vector2(15.3833, -200)
+script = ExtResource("3_6uqi0")
+
+[node name="M&P West 1" type="Node2D" parent="Map/Map Sprite/M&P"]
+position = Vector2(-76.9263, -169.23)
+script = ExtResource("3_6uqi0")
+
+[node name="M&P West 2" type="Node2D" parent="Map/Map Sprite/M&P"]
+position = Vector2(-76.9263, 200)
+script = ExtResource("3_6uqi0")
+
+[node name="M&P South 1" type="Node2D" parent="Map/Map Sprite/M&P"]
+position = Vector2(15.3833, 215.385)
+script = ExtResource("3_6uqi0")
+
+[node name="M&P South Basement" type="Node2D" parent="Map/Map Sprite/M&P"]
+position = Vector2(-15.387, 246.154)
+script = ExtResource("3_6uqi0")
+
+[node name="Sond" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-707.692, 707.692)
+script = ExtResource("3_6uqi0")
+
+[node name="Sond North 1" type="Node2D" parent="Map/Map Sprite/Sond"]
+position = Vector2(0.00244141, -169.229)
+script = ExtResource("3_6uqi0")
+
+[node name="Sond East 1" type="Node2D" parent="Map/Map Sprite/Sond"]
+position = Vector2(-76.9272, -153.844)
+script = ExtResource("3_6uqi0")
+
+[node name="Sond East 2" type="Node2D" parent="Map/Map Sprite/Sond"]
+position = Vector2(-76.9272, 215.387)
+script = ExtResource("3_6uqi0")
+
+[node name="Sond South 1" type="Node2D" parent="Map/Map Sprite/Sond"]
+position = Vector2(0.00244141, 230.771)
+script = ExtResource("3_6uqi0")
+
+[node name="Sher" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-969.231, 707.693)
+script = ExtResource("3_6uqi0")
+
+[node name="Sher East 1" type="Node2D" parent="Map/Map Sprite/Sher"]
+position = Vector2(61.5406, -153.85)
+script = ExtResource("3_6uqi0")
+
+[node name="Sher East 2" type="Node2D" parent="Map/Map Sprite/Sher"]
+position = Vector2(61.5406, -0.00390625)
+script = ExtResource("3_6uqi0")
+
+[node name="Sher East 3" type="Node2D" parent="Map/Map Sprite/Sher"]
+position = Vector2(61.5406, 215.381)
+script = ExtResource("3_6uqi0")
+
+[node name="UC" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-1184.62, 200)
+script = ExtResource("3_6uqi0")
+
+[node name="UC East 1" type="Node2D" parent="Map/Map Sprite/UC"]
+position = Vector2(200.005, 138.46)
+script = ExtResource("3_6uqi0")
+
+[node name="UC East 2" type="Node2D" parent="Map/Map Sprite/UC"]
+position = Vector2(92.3053, -123.08)
+script = ExtResource("3_6uqi0")
+
+[node name="UC East 2nd Floor" type="Node2D" parent="Map/Map Sprite/UC"]
+position = Vector2(46.1552, -138.46)
+rotation = 3.14159
+script = ExtResource("3_6uqi0")
+
+[node name="UC West 1" type="Node2D" parent="Map/Map Sprite/UC"]
+position = Vector2(-138.455, 30.77)
+script = ExtResource("3_6uqi0")
+
+[node name="UC South 2nd Floor" type="Node2D" parent="Map/Map Sprite/UC"]
+position = Vector2(61.5452, 200)
+script = ExtResource("3_6uqi0")
+
+[node name="PAHB" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-2569.23, -6.10352e-05)
+script = ExtResource("3_6uqi0")
+
+[node name="PAHB North 1" type="Node2D" parent="Map/Map Sprite/PAHB"]
+position = Vector2(230.767, -138.457)
+script = ExtResource("3_6uqi0")
+
+[node name="PAHB North 2" type="Node2D" parent="Map/Map Sprite/PAHB"]
+position = Vector2(-123.08, -261.538)
+script = ExtResource("3_6uqi0")
+
+[node name="PAHB East 1" type="Node2D" parent="Map/Map Sprite/PAHB"]
+position = Vector2(-415.387, -169.228)
+script = ExtResource("3_6uqi0")
+
+[node name="PAHB West 1" type="Node2D" parent="Map/Map Sprite/PAHB"]
+position = Vector2(384.613, -46.1538)
+script = ExtResource("3_6uqi0")
+
+[node name="PAHB South 1" type="Node2D" parent="Map/Map Sprite/PAHB"]
+position = Vector2(-200.002, -15.3853)
+script = ExtResource("3_6uqi0")
+
+[node name="FA" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-1600, -323.077)
+script = ExtResource("3_6uqi0")
+
+[node name="FA North 1" type="Node2D" parent="Map/Map Sprite/FA"]
+position = Vector2(138.46, -107.692)
+script = ExtResource("3_6uqi0")
+
+[node name="FA North 2" type="Node2D" parent="Map/Map Sprite/FA"]
+position = Vector2(138.46, 123.077)
+script = ExtResource("3_6uqi0")
+
+[node name="FA West 1" type="Node2D" parent="Map/Map Sprite/FA"]
+position = Vector2(-30.7694, 215.383)
+script = ExtResource("3_6uqi0")
+
+[node name="FA East 1" type="Node2D" parent="Map/Map Sprite/FA"]
+position = Vector2(30.7605, -184.617)
+script = ExtResource("3_6uqi0")
+
+[node name="FA South 1" type="Node2D" parent="Map/Map Sprite/FA"]
+position = Vector2(-246.16, -153.846)
+script = ExtResource("3_6uqi0")
+
+[node name="FA South 2" type="Node2D" parent="Map/Map Sprite/FA"]
+position = Vector2(-246.16, 169.229)
+script = ExtResource("3_6uqi0")
+
+[node name="Lib" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-753.846, -1553.85)
+script = ExtResource("3_6uqi0")
+
+[node name="CM" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-138.462, -784.615)
+script = ExtResource("3_6uqi0")
+
+[node name="CM North 1" type="Node2D" parent="Map/Map Sprite/CM"]
+position = Vector2(46.1616, -92.3086)
+script = ExtResource("3_6uqi0")
+
+[node name="CM North 2" type="Node2D" parent="Map/Map Sprite/CM"]
+position = Vector2(200.001, -92.3086)
+script = ExtResource("3_6uqi0")
+
+[node name="CM South 1" type="Node2D" parent="Map/Map Sprite/CM"]
+position = Vector2(-323.069, 92.3115)
+script = ExtResource("3_6uqi0")
+
+[node name="CM South 2" type="Node2D" parent="Map/Map Sprite/CM"]
+position = Vector2(0.00146484, 107.691)
+script = ExtResource("3_6uqi0")
+
+[node name="CM South 3" type="Node2D" parent="Map/Map Sprite/CM"]
+position = Vector2(76.9314, 446.154)
+script = ExtResource("3_6uqi0")
+
+[node name="CM South 4" type="Node2D" parent="Map/Map Sprite/CM"]
+position = Vector2(153.851, 446.154)
+script = ExtResource("3_6uqi0")
+
+[node name="ILSB" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(261.538, 0.00012207)
+script = ExtResource("3_6uqi0")
+
+[node name="ILSB North 1" type="Node2D" parent="Map/Map Sprite/ILSB"]
+position = Vector2(107.692, -153.842)
+script = ExtResource("3_6uqi0")
+
+[node name="ILSB West 1" type="Node2D" parent="Map/Map Sprite/ILSB"]
+position = Vector2(-230.768, -30.769)
+script = ExtResource("3_6uqi0")
+
+[node name="Admin" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-1000, 1153.85)
+script = ExtResource("3_6uqi0")
+
+[node name="Admin East 1" type="Node2D" parent="Map/Map Sprite/Admin"]
+position = Vector2(92.3081, -30.769)
+script = ExtResource("3_6uqi0")
+
+[node name="Admin East 2" type="Node2D" parent="Map/Map Sprite/Admin"]
+position = Vector2(92.3081, 61.5386)
+script = ExtResource("3_6uqi0")
+
+[node name="Admin South 1" type="Node2D" parent="Map/Map Sprite/Admin"]
+position = Vector2(30.7703, 138.461)
+script = ExtResource("3_6uqi0")
+
+[node name="RAC" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-646.154, 1153.85)
 script = ExtResource("3_6uqi0")
