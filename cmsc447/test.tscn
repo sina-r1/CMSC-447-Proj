@@ -13,7 +13,7 @@ script = ExtResource("1_37kl0")
 color = Color(0.901961, 0.854902, 0.792157, 1)
 
 [node name="Map Sprite" type="Sprite2D" parent="Map"]
-position = Vector2(228, 384)
+position = Vector2(241, 371)
 scale = Vector2(0.065, 0.065)
 texture = ExtResource("2_8uh7m")
 
@@ -256,6 +256,38 @@ script = ExtResource("3_6uqi0")
 
 [node name="Admin South 1" type="Node2D" parent="Map/Map Sprite/Admin"]
 position = Vector2(30.7703, 138.461)
+script = ExtResource("3_6uqi0")
+
+[node name="PHY" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(769.231, -646.154)
+script = ExtResource("3_6uqi0")
+
+[node name="PHY North 1" type="Node2D" parent="Map/Map Sprite/PHY"]
+position = Vector2(-76.923, -184.615)
+script = ExtResource("3_6uqi0")
+
+[node name="PHY North 2" type="Node2D" parent="Map/Map Sprite/PHY"]
+position = Vector2(184.615, -184.615)
+script = ExtResource("3_6uqi0")
+
+[node name="PHY South" type="Node2D" parent="Map/Map Sprite/PHY"]
+position = Vector2(-46.1539, 215.385)
+script = ExtResource("3_6uqi0")
+
+[node name="PPB" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(923.077, -1246.15)
+script = ExtResource("3_6uqi0")
+
+[node name="PPB North" type="Node2D" parent="Map/Map Sprite/PPB"]
+position = Vector2(-61.5383, -107.692)
+script = ExtResource("3_6uqi0")
+
+[node name="PPB East" type="Node2D" parent="Map/Map Sprite/PPB"]
+position = Vector2(-215.385, 30.7691)
+script = ExtResource("3_6uqi0")
+
+[node name="PPB South" type="Node2D" parent="Map/Map Sprite/PPB"]
+position = Vector2(-15.3845, 107.692)
 script = ExtResource("3_6uqi0")
 
 [node name="RAC" type="Node2D" parent="Map/Map Sprite"]
