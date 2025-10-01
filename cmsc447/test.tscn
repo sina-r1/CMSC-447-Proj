@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmowk1bavaaey"]
+[gd_scene load_steps=4 format=3 uid="uid://cmowk1bavaaey"]
 
 [ext_resource type="Script" uid="uid://mi5je6qj7r7e" path="res://map.gd" id="1_37kl0"]
 [ext_resource type="Texture2D" uid="uid://cs3qm0bkp5fks" path="res://2024-CAMPUS-MAP-2.jpg" id="2_8uh7m"]
+[ext_resource type="Script" uid="uid://chfpacpmqrpjo" path="res://location.gd" id="3_6uqi0"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -12,6 +13,18 @@ script = ExtResource("1_37kl0")
 color = Color(0.901961, 0.854902, 0.792157, 1)
 
 [node name="Map Sprite" type="Sprite2D" parent="Map"]
-position = Vector2(180, 400)
+position = Vector2(176, 405)
 scale = Vector2(0.065, 0.065)
 texture = ExtResource("2_8uh7m")
+
+[node name="MapNode" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-246.154, -1661.54)
+script = ExtResource("3_6uqi0")
+
+[node name="ITE East Door" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-1646.15, 538.462)
+script = ExtResource("3_6uqi0")
+
+[node name="ITE East Door2" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-1646.15, 1000)
+script = ExtResource("3_6uqi0")
