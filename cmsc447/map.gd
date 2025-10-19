@@ -4,6 +4,7 @@ extends Node2D
 @export var map_image_path = "res://2024-CAMPUS-MAP-2.jpg"
 
 @onready var background_color = $"Background Color"
+@onready var input_ui: ColorRect = $"Input UI"
 
 var touch_inputs = {}
 
@@ -27,7 +28,7 @@ func _ready():
 func _input(event):
 	if event is InputEventScreenTouch and event.is_released():
 		touch_inputs.erase(event.index)
-	elif event is InputEventScreenTouch or event is InputEventScreenDrag:
+	elif (event is InputEventScreenTouch or event is InputEventScreenDrag) and event.position.y > input_ui.size.y:
 		touch_inputs[event.index] = event
 		if event is InputEventScreenDrag:
 			map_sprite.position += event.relative
