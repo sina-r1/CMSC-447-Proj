@@ -1072,9 +1072,10 @@ script = ExtResource("3_6uqi0")
 position = Vector2(759.96, 1350.35)
 script = ExtResource("3_6uqi0")
 
-[node name="Path Nodes24" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+[node name="Path Nodes24" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(759.96, 1011.89)
 script = ExtResource("3_6uqi0")
+accessibleNodes = [NodePath("../Path Nodes63")]
 
 [node name="Path Nodes25" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(759.96, 1104.2)
@@ -1148,13 +1149,16 @@ script = ExtResource("3_6uqi0")
 position = Vector2(-24.6554, 1827.27)
 script = ExtResource("3_6uqi0")
 
-[node name="Path Nodes47" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+[node name="Path Nodes47" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("nonAccessibleNodes")]
 position = Vector2(-24.6554, 1627.27)
 script = ExtResource("3_6uqi0")
+nonAccessibleNodes = [NodePath("../Path Nodes48")]
 
-[node name="Path Nodes48" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(-301.578, 1627.27)
+[node name="Path Nodes48" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes", "nonAccessibleNodes")]
+position = Vector2(-297.146, 1628.96)
 script = ExtResource("3_6uqi0")
+accessibleNodes = [NodePath("../../ENG/ENG South 1")]
+nonAccessibleNodes = [NodePath("../Path Nodes47")]
 
 [node name="Path Nodes49" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(-501.578, 1627.27)
@@ -1445,12 +1449,11 @@ position = Vector2(252.268, 1627.27)
 script = ExtResource("3_6uqi0")
 
 [node name="ITE" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-1646.15, 753.846)
 script = ExtResource("3_6uqi0")
 
 [node name="ITE North 1" type="Node2D" parent="Map/Map Sprite/ITE"]
-position = Vector2(0.00390625, -215.384)
+position = Vector2(5.62243, -214.26)
 script = ExtResource("3_6uqi0")
 
 [node name="ITE North 2" type="Node2D" parent="Map/Map Sprite/ITE"]
@@ -1470,7 +1473,6 @@ position = Vector2(0.00012207, 261.539)
 script = ExtResource("3_6uqi0")
 
 [node name="ENG" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-1646.15, 215.385)
 script = ExtResource("3_6uqi0")
 
@@ -1486,12 +1488,12 @@ script = ExtResource("3_6uqi0")
 position = Vector2(-215.384, 0)
 script = ExtResource("3_6uqi0")
 
-[node name="ENG South 1" type="Node2D" parent="Map/Map Sprite/ENG"]
-position = Vector2(-15.3845, 215.385)
+[node name="ENG South 1" type="Node2D" parent="Map/Map Sprite/ENG" node_paths=PackedStringArray("accessibleNodes")]
+position = Vector2(-23.405, 209.264)
 script = ExtResource("3_6uqi0")
+accessibleNodes = [NodePath("../../Path Nodes/Path Nodes48")]
 
 [node name="M&P" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-676.923, 200)
 script = ExtResource("3_6uqi0")
 
@@ -1512,7 +1514,6 @@ position = Vector2(15.3833, 215.385)
 script = ExtResource("3_6uqi0")
 
 [node name="Sond" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-707.692, 707.692)
 script = ExtResource("3_6uqi0")
 
@@ -1533,7 +1534,6 @@ position = Vector2(0.00244141, 230.771)
 script = ExtResource("3_6uqi0")
 
 [node name="Sher" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-969.231, 707.693)
 script = ExtResource("3_6uqi0")
 
@@ -1550,7 +1550,6 @@ position = Vector2(61.5406, 215.381)
 script = ExtResource("3_6uqi0")
 
 [node name="UC" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-1184.62, 200)
 script = ExtResource("3_6uqi0")
 
@@ -1576,7 +1575,6 @@ position = Vector2(61.5452, 200)
 script = ExtResource("3_6uqi0")
 
 [node name="PAHB" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-2569.23, -6.10352e-05)
 script = ExtResource("3_6uqi0")
 
@@ -1601,7 +1599,6 @@ position = Vector2(-200.002, -15.3853)
 script = ExtResource("3_6uqi0")
 
 [node name="FA" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-1600, -323.077)
 script = ExtResource("3_6uqi0")
 
@@ -1630,12 +1627,10 @@ position = Vector2(-246.16, 169.229)
 script = ExtResource("3_6uqi0")
 
 [node name="Lib" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-753.846, -1553.85)
 script = ExtResource("3_6uqi0")
 
 [node name="CM" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-138.462, -784.615)
 script = ExtResource("3_6uqi0")
 
@@ -1664,7 +1659,6 @@ position = Vector2(153.851, 446.154)
 script = ExtResource("3_6uqi0")
 
 [node name="ILSB" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(261.538, 0.00012207)
 script = ExtResource("3_6uqi0")
 
@@ -1677,7 +1671,6 @@ position = Vector2(-230.768, -30.769)
 script = ExtResource("3_6uqi0")
 
 [node name="Admin" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-1000, 1153.85)
 script = ExtResource("3_6uqi0")
 
@@ -1694,7 +1687,6 @@ position = Vector2(30.7703, 138.461)
 script = ExtResource("3_6uqi0")
 
 [node name="PHY" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(769.231, -646.154)
 script = ExtResource("3_6uqi0")
 
@@ -1711,7 +1703,6 @@ position = Vector2(-46.1539, 215.385)
 script = ExtResource("3_6uqi0")
 
 [node name="PPB" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(923.077, -1246.15)
 script = ExtResource("3_6uqi0")
 
@@ -1728,13 +1719,13 @@ position = Vector2(-15.3845, 107.692)
 script = ExtResource("3_6uqi0")
 
 [node name="RAC" type="Node2D" parent="Map/Map Sprite"]
-visible = false
 position = Vector2(-646.154, 1153.85)
 script = ExtResource("3_6uqi0")
 
 [node name="Input UI" type="ColorRect" parent="Map"]
 offset_right = 360.0
 offset_bottom = 197.0
+color = Color(0.988235, 0.705882, 0.0823529, 1)
 
 [node name="TextEdit" type="TextEdit" parent="Map/Input UI"]
 layout_mode = 0
@@ -1777,3 +1768,8 @@ offset_right = 113.0
 offset_bottom = 20.0
 bbcode_enabled = true
 text = "[color=black]Accessible?[/color]"
+
+[node name="PathMarker" type="ColorRect" parent="Map"]
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(1, 0, 1, 1)

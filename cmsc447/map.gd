@@ -2,9 +2,11 @@ extends Node2D
 
 @onready var map_sprite = $"Map Sprite"
 @export var map_image_path = "res://2024-CAMPUS-MAP-2.jpg"
+@onready var path_marker: ColorRect = $PathMarker
 
 @onready var background_color = $"Background Color"
 @onready var input_ui: ColorRect = $"Input UI"
+
 
 var touch_inputs = {}
 
@@ -23,7 +25,8 @@ func _ready():
 	map_sprite.scale = Vector2(initial_scale_factor, initial_scale_factor)
 	
 	background_color.size = screen_res
-
+	
+	show_all_connections()
 
 func _input(event):
 	if event is InputEventScreenTouch and event.is_released():
@@ -61,3 +64,27 @@ func clamp_position():
 	var image_res = map_sprite.texture.get_size()
 	map_sprite.position.x = clampf(map_sprite.position.x, (screen_res.x-image_res.x*map_sprite.scale.x)/2, (screen_res.x+image_res.x*map_sprite.scale.x)/2)
 	map_sprite.position.y = clampf(map_sprite.position.y, (screen_res.y-image_res.y*map_sprite.scale.y)/2, (screen_res.y+image_res.y*map_sprite.scale.y)/2)
+
+func show_all_connections():
+	for child in map_sprite.get_children():
+		if ("accessibleNodes" in child and child.accessibleNodes.size() > 0):
+			for neighbor in child.accessibleNodes:
+				add_path(child, neighbor)
+		if ("nonAccessibleNodes" in child and child.nonAccessibleNodes.size() > 0):
+			for neighbor in child.nonAccessibleNodes:
+				add_path(child, neighbor)
+		if child.get_child_count() > 0:
+			for grandchild in child.get_children():
+				if ("accessibleNodes" in grandchild and grandchild.accessibleNodes.size() > 0):
+					for neighbor in grandchild.accessibleNodes:
+						add_path(grandchild, neighbor)
+				if ("nonAccessibleNodes" in grandchild and grandchild.nonAccessibleNodes.size() > 0):
+					for neighbor in grandchild.nonAccessibleNodes:
+						add_path(grandchild, neighbor)
+
+func add_path(firstNode, secondNode):
+	var new_path = path_marker.duplicate()
+	firstNode.add_child(new_path)
+	new_path.position = Vector2.ZERO
+	new_path.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
+	new_path.size = Vector2((firstNode.global_position - secondNode.global_position).length() / initial_scale_factor, 10)
