@@ -69,7 +69,7 @@ func show_all_connections():
 	for child in map_sprite.get_children():
 		if ("accessibleNodes" in child and child.accessibleNodes.size() > 0):
 			for neighbor in child.accessibleNodes:
-				add_path(child, neighbor)
+				add_accessible_path(child, neighbor)
 		if ("nonAccessibleNodes" in child and child.nonAccessibleNodes.size() > 0):
 			for neighbor in child.nonAccessibleNodes:
 				add_path(child, neighbor)
@@ -77,14 +77,25 @@ func show_all_connections():
 			for grandchild in child.get_children():
 				if ("accessibleNodes" in grandchild and grandchild.accessibleNodes.size() > 0):
 					for neighbor in grandchild.accessibleNodes:
-						add_path(grandchild, neighbor)
+						add_accessible_path(grandchild, neighbor)
 				if ("nonAccessibleNodes" in grandchild and grandchild.nonAccessibleNodes.size() > 0):
 					for neighbor in grandchild.nonAccessibleNodes:
 						add_path(grandchild, neighbor)
 
 func add_path(firstNode, secondNode):
-	var new_path = path_marker.duplicate()
-	firstNode.add_child(new_path)
-	new_path.position = Vector2.ZERO
-	new_path.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
-	new_path.size = Vector2((firstNode.global_position - secondNode.global_position).length() / initial_scale_factor, 10)
+	if (secondNode != null):
+		var new_path = path_marker.duplicate()
+		new_path.color = Color.RED
+		firstNode.add_child(new_path)
+		new_path.position = Vector2.ZERO
+		new_path.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
+		new_path.size = Vector2((firstNode.global_position - secondNode.global_position).length() / initial_scale_factor, 10)
+
+func add_accessible_path(firstNode, secondNode):
+	if (secondNode != null):
+		var new_path = path_marker.duplicate()
+		new_path.color = Color.BLUE
+		firstNode.add_child(new_path)
+		new_path.position = Vector2.ZERO
+		new_path.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
+		new_path.size = Vector2((firstNode.global_position - secondNode.global_position).length() / initial_scale_factor, 10)
