@@ -89,7 +89,7 @@ func add_path(firstNode, secondNode):
 		firstNode.add_child(new_path)
 		new_path.position = Vector2.ZERO
 		new_path.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
-		new_path.size = Vector2((firstNode.global_position - secondNode.global_position).length() / initial_scale_factor, 10)
+		new_path.size = Vector2((firstNode.global_position - secondNode.global_position).length() / initial_scale_factor, 5)
 
 func add_accessible_path(firstNode, secondNode):
 	if (secondNode != null):
@@ -98,4 +98,4 @@ func add_accessible_path(firstNode, secondNode):
 		firstNode.add_child(new_path)
 		new_path.position = Vector2.ZERO
 		new_path.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
-		new_path.size = Vector2((firstNode.global_position - secondNode.global_position).length() / initial_scale_factor, 10)
+		new_path.size = Vector2((firstNode.global_position - secondNode.global_position).length() / initial_scale_factor, 5)
