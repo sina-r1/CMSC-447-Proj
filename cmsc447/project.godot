@@ -13,6 +13,8 @@ config_version=5
 config/name="CMSC447"
 run/main_scene="uid://cmowk1bavaaey"
 config/features=PackedStringArray("4.4", "Mobile")
+boot_splash/bg_color=Color(0.988235, 0.705882, 0.0823529, 1)
+boot_splash/image="uid://71ubmvdxmows"
 config/icon="res://icon.svg"
 
 [display]
