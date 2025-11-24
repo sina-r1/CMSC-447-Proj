@@ -975,7 +975,7 @@ texture = ExtResource("4_ppyta")
 color = Color(0.901961, 0.854902, 0.792157, 1)
 
 [node name="Map Sprite" type="Sprite2D" parent="Map"]
-position = Vector2(254.888, 630.737)
+position = Vector2(253.969, 596.416)
 scale = Vector2(0.065, 0.065)
 texture = ExtResource("2_8uh7m")
 
@@ -1690,18 +1690,6 @@ script = ExtResource("3_6uqi0")
 position = Vector2(2808.85, 245.111)
 script = ExtResource("3_6uqi0")
 
-[node name="Path Nodes154" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(2968.49, 135.545)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes155" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(2599.22, 92.1025)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes156" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(2596.51, 33.7266)
-script = ExtResource("3_6uqi0")
-
 [node name="Path Nodes157" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(2512.34, 77.1694)
 script = ExtResource("3_6uqi0")
@@ -1761,37 +1749,17 @@ accessibleNodes = [NodePath("../Path Nodes126"), NodePath("../Path Nodes141")]
 [node name="Path Nodes128" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(1021.18, -1063.85)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../Path Nodes133"), NodePath("../Path Nodes129")]
-
-[node name="Path Nodes129" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
-position = Vector2(1019.88, -1126.6)
-script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../Path Nodes128"), NodePath("../Path Nodes132")]
-
-[node name="Path Nodes130" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
-position = Vector2(832.923, -1065.79)
-script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../Path Nodes133"), NodePath("../Path Nodes144"), NodePath("../Path Nodes131")]
+accessibleNodes = [NodePath("../../Lot 7/Path Nodes133"), NodePath("../../Lot 7/Path Nodes129")]
 
 [node name="Path Nodes131" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(355.932, -1204.46)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../Path Nodes130"), NodePath("../Path Nodes391"), NodePath("../Path Nodes392")]
-
-[node name="Path Nodes132" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
-position = Vector2(1066.46, -1129.83)
-script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../Path Nodes129"), NodePath("../Path Nodes134")]
-
-[node name="Path Nodes133" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
-position = Vector2(958.426, -1030.85)
-script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../Path Nodes130"), NodePath("../Path Nodes143"), NodePath("../Path Nodes128")]
+accessibleNodes = [NodePath("../../Lot 7/Path Nodes130"), NodePath("../Path Nodes391"), NodePath("../Path Nodes392")]
 
 [node name="Path Nodes134" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(1069.49, -1058.09)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../Path Nodes132"), NodePath("../../Erickson Hall/Erickson West 1"), NodePath("../Path Nodes143")]
+accessibleNodes = [NodePath("../../Lot 7/Path Nodes132"), NodePath("../../Erickson Hall/Erickson West 1"), NodePath("../Path Nodes143")]
 
 [node name="Path Nodes135" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes", "nonAccessibleNodes")]
 position = Vector2(1051.56, -938.013)
@@ -1838,12 +1806,12 @@ nonAccessibleNodes = [NodePath("../Path Nodes135"), NodePath("../Path Nodes141")
 [node name="Path Nodes143" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(999.628, -978.042)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../Path Nodes144"), NodePath("../Path Nodes133"), NodePath("../Path Nodes134")]
+accessibleNodes = [NodePath("../Path Nodes144"), NodePath("../../Lot 7/Path Nodes133"), NodePath("../Path Nodes134")]
 
 [node name="Path Nodes144" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(969.72, -929.743)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../Path Nodes143"), NodePath("../Path Nodes135"), NodePath("../Path Nodes110"), NodePath("../../Lib"), NodePath("../Path Nodes130")]
+accessibleNodes = [NodePath("../Path Nodes143"), NodePath("../Path Nodes135"), NodePath("../Path Nodes110"), NodePath("../../Lib"), NodePath("../../Lot 7/Path Nodes130")]
 
 [node name="Path Nodes168" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(1080.37, -1807.51)
@@ -1933,10 +1901,6 @@ script = ExtResource("3_6uqi0")
 position = Vector2(1172.12, -1606.92)
 script = ExtResource("3_6uqi0")
 
-[node name="Path Nodes190" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(1076.04, -1351.47)
-script = ExtResource("3_6uqi0")
-
 [node name="Path Nodes191" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(3158.12, -360.499)
 script = ExtResource("3_6uqi0")
@@ -1991,14 +1955,6 @@ script = ExtResource("3_6uqi0")
 
 [node name="Path Nodes204" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(2598.63, -725.694)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes205" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(2591.19, -968.466)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes206" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(2468.11, -954.941)
 script = ExtResource("3_6uqi0")
 
 [node name="Path Nodes207" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
@@ -2112,6 +2068,10 @@ script = ExtResource("3_6uqi0")
 
 [node name="Path Nodes234" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(2936.98, -525.197)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes235" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(3132.4, -690.086)
 script = ExtResource("3_6uqi0")
 
 [node name="Path Nodes236" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
@@ -2287,10 +2247,6 @@ script = ExtResource("3_6uqi0")
 position = Vector2(3092.16, -256.198)
 script = ExtResource("3_6uqi0")
 
-[node name="Path Nodes273" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(2998.67, -36.3943)
-script = ExtResource("3_6uqi0")
-
 [node name="Path Nodes293" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(3065.1, -31.4734)
 script = ExtResource("3_6uqi0")
@@ -2315,16 +2271,8 @@ script = ExtResource("3_6uqi0")
 position = Vector2(2590.7, -265.364)
 script = ExtResource("3_6uqi0")
 
-[node name="Path Nodes300" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(2597.33, -179.728)
-script = ExtResource("3_6uqi0")
-
 [node name="Path Nodes302" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(2732.93, 859.224)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes303" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(3124.15, 284.289)
 script = ExtResource("3_6uqi0")
 
 [node name="Path Nodes304" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
@@ -2343,10 +2291,6 @@ script = ExtResource("3_6uqi0")
 position = Vector2(3131.53, 64.4851)
 script = ExtResource("3_6uqi0")
 
-[node name="Path Nodes308" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(2986.36, 40.7006)
-script = ExtResource("3_6uqi0")
-
 [node name="Path Nodes309" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(3046.24, 43.9815)
 script = ExtResource("3_6uqi0")
@@ -2357,10 +2301,6 @@ script = ExtResource("3_6uqi0")
 
 [node name="Path Nodes317" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(3962.81, 572.129)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes318" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(3692.26, 486.282)
 script = ExtResource("3_6uqi0")
 
 [node name="Path Nodes319" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
@@ -2469,10 +2409,6 @@ script = ExtResource("3_6uqi0")
 
 [node name="Path Nodes337" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
 position = Vector2(3276.03, -264.983)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes338" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(3220.88, -5.24268)
 script = ExtResource("3_6uqi0")
 
 [node name="Path Nodes339" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
@@ -2987,8 +2923,144 @@ script = ExtResource("3_6uqi0")
 position = Vector2(-2196.31, 843.122)
 script = ExtResource("3_6uqi0")
 
-[node name="Path Nodes235" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
-position = Vector2(3132.4, -690.086)
+[node name="Path Nodes469" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(4134.94, 2198.56)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes470" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(4348.49, 2053.12)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes474" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(4876.64, 2192.83)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes475" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(5209.4, 1816.43)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes476" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(5051.2, 1943.72)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes477" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(5058.47, 2063.73)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes478" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(4968.71, 2024.9)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes479" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(4974.98, 1598.47)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes480" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(5022.4, 1580.08)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes483" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(4597.5, 814.385)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes484" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(4475.05, 731.498)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes485" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(4427.96, 1541.53)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes487" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(3917.44, 1991.4)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes488" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(4024.54, 2089.4)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes489" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(3744.18, 2028.48)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes490" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(3639.82, 1924.98)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes491" type="Node2D" parent="Map/Map Sprite/Path Nodes"]
+position = Vector2(3475.96, 1831.59)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker North" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-2872.21, -3382.13)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker North" type="Node2D" parent="Map/Map Sprite/Walker North"]
+position = Vector2(-116.105, 71.9858)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker North2" type="Node2D" parent="Map/Map Sprite/Walker North"]
+position = Vector2(-157.026, 151.615)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker North3" type="Node2D" parent="Map/Map Sprite/Walker North"]
+position = Vector2(-42.0064, -170.219)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker North4" type="Node2D" parent="Map/Map Sprite/Walker North"]
+position = Vector2(140.476, -101.649)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker North5" type="Node2D" parent="Map/Map Sprite/Walker North"]
+position = Vector2(256.602, 22.2177)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker North6" type="Node2D" parent="Map/Map Sprite/Walker North"]
+position = Vector2(165.914, -197.868)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker North7" type="Node2D" parent="Map/Map Sprite/Walker North"]
+position = Vector2(-161.45, -211.139)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker South" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-3288.71, -2647.05)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker South6" type="Node2D" parent="Map/Map Sprite/Walker South"]
+position = Vector2(65.3737, -162.277)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker South7" type="Node2D" parent="Map/Map Sprite/Walker South"]
+position = Vector2(11.6749, -271.912)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker South8" type="Node2D" parent="Map/Map Sprite/Walker South"]
+position = Vector2(-62.9066, -209.263)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker South9" type="Node2D" parent="Map/Map Sprite/Walker South"]
+position = Vector2(-71.8565, 59.9762)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker South10" type="Node2D" parent="Map/Map Sprite/Walker South"]
+position = Vector2(248.998, 62.3988)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker South11" type="Node2D" parent="Map/Map Sprite/Walker South"]
+position = Vector2(165.699, 331.433)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker South12" type="Node2D" parent="Map/Map Sprite/Walker South"]
+position = Vector2(43.0016, 289.783)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker South13" type="Node2D" parent="Map/Map Sprite/Walker South"]
+position = Vector2(-219.278, 162.583)
+script = ExtResource("3_6uqi0")
+
+[node name="Walker South14" type="Node2D" parent="Map/Map Sprite/Walker South"]
+position = Vector2(-353.232, 123.185)
 script = ExtResource("3_6uqi0")
 
 [node name="ITE" type="Node2D" parent="Map/Map Sprite"]
@@ -3397,36 +3469,6 @@ position = Vector2(-457.22, 310.967)
 script = ExtResource("3_6uqi0")
 accessibleNodes = [NodePath("../../Path Nodes/Path Nodes134")]
 
-[node name="Lot 23" type="Node2D" parent="Map/Map Sprite"]
-position = Vector2(3159.4, -1778.39)
-script = ExtResource("3_6uqi0")
-isDestination = true
-
-[node name="Path Nodes312" type="Node2D" parent="Map/Map Sprite/Lot 23"]
-position = Vector2(139.857, 324.942)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes332" type="Node2D" parent="Map/Map Sprite/Lot 23"]
-position = Vector2(-275.922, 254.391)
-script = ExtResource("3_6uqi0")
-
-[node name="Lot 24" type="Node2D" parent="Map/Map Sprite"]
-position = Vector2(3859.13, -1585.97)
-script = ExtResource("3_6uqi0")
-isDestination = true
-
-[node name="Path Nodes462" type="Node2D" parent="Map/Map Sprite/Lot 24"]
-position = Vector2(144.082, 347.767)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes463" type="Node2D" parent="Map/Map Sprite/Lot 24"]
-position = Vector2(-7.71048, 303.474)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes464" type="Node2D" parent="Map/Map Sprite/Lot 24"]
-position = Vector2(-416.419, 177.615)
-script = ExtResource("3_6uqi0")
-
 [node name="Stadium Lot" type="Node2D" parent="Map/Map Sprite"]
 position = Vector2(3098.56, -884.641)
 script = ExtResource("3_6uqi0")
@@ -3453,30 +3495,6 @@ script = ExtResource("3_6uqi0")
 
 [node name="Path Nodes316" type="Node2D" parent="Map/Map Sprite/Stadium Lot"]
 position = Vector2(-380.043, 339.056)
-script = ExtResource("3_6uqi0")
-
-[node name="Lot 26" type="Node2D" parent="Map/Map Sprite"]
-position = Vector2(3852.18, -161.054)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes317" type="Node2D" parent="Map/Map Sprite/Lot 26"]
-position = Vector2(-74.3953, -272.356)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes318" type="Node2D" parent="Map/Map Sprite/Lot 26"]
-position = Vector2(-54.6875, -327.101)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes319" type="Node2D" parent="Map/Map Sprite/Lot 26"]
-position = Vector2(45.7534, -232.542)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes320" type="Node2D" parent="Map/Map Sprite/Lot 26"]
-position = Vector2(66.3335, -288.956)
-script = ExtResource("3_6uqi0")
-
-[node name="Path Nodes323" type="Node2D" parent="Map/Map Sprite/Lot 26"]
-position = Vector2(348.469, -198.197)
 script = ExtResource("3_6uqi0")
 
 [node name="Lot 1" type="Node2D" parent="Map/Map Sprite"]
@@ -3513,6 +3531,334 @@ script = ExtResource("3_6uqi0")
 
 [node name="Path Nodes149" type="Node2D" parent="Map/Map Sprite/Lot 2"]
 position = Vector2(255.796, -191.463)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 3" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(2110.2, -884.91)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Node" type="Node2D" parent="Map/Map Sprite/Lot 3"]
+position = Vector2(-269.704, -184.211)
+scale = Vector2(0.065, 0.065)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes338" type="Node2D" parent="Map/Map Sprite/Lot 3"]
+position = Vector2(-249.284, -270.683)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes303" type="Node2D" parent="Map/Map Sprite/Lot 3"]
+position = Vector2(-346.014, 18.8486)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes318" type="Node2D" parent="Map/Map Sprite/Lot 3"]
+position = Vector2(222.096, 220.842)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 4" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(1431.53, -1183.34)
+scale = Vector2(236.686, 236.686)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes308" type="Node2D" parent="Map/Map Sprite/Lot 4"]
+position = Vector2(0.823315, 0.31134)
+scale = Vector2(0.004225, 0.004225)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes273" type="Node2D" parent="Map/Map Sprite/Lot 4"]
+position = Vector2(0.875324, -0.0143852)
+scale = Vector2(0.004225, 0.004225)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes154" type="Node2D" parent="Map/Map Sprite/Lot 4"]
+position = Vector2(0.747812, 0.712055)
+scale = Vector2(0.004225, 0.004225)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes155" type="Node2D" parent="Map/Map Sprite/Lot 4"]
+position = Vector2(-0.812351, 0.528511)
+scale = Vector2(0.004225, 0.004225)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes156" type="Node2D" parent="Map/Map Sprite/Lot 4"]
+position = Vector2(-0.823801, 0.281872)
+scale = Vector2(0.004225, 0.004225)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes300" type="Node2D" parent="Map/Map Sprite/Lot 4"]
+position = Vector2(-0.820337, -0.619972)
+scale = Vector2(0.004225, 0.004225)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 5" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(775.755, -3288.53)
+scale = Vector2(7.54189e-08, 7.54189e-08)
+script = ExtResource("3_6uqi0")
+
+[node name="Path 1000" type="Node2D" parent="Map/Map Sprite/Lot 5"]
+position = Vector2(2.01582e+09, 2.83476e+08)
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("3_6uqi0")
+
+[node name="Path 1002" type="Node2D" parent="Map/Map Sprite/Lot 5"]
+position = Vector2(-2.56702e+09, 4.25206e+08)
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("3_6uqi0")
+
+[node name="Path 1003" type="Node2D" parent="Map/Map Sprite/Lot 5"]
+position = Vector2(-2.63001e+09, -3.93719e+08)
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("3_6uqi0")
+
+[node name="Path 1004" type="Node2D" parent="Map/Map Sprite/Lot 5"]
+position = Vector2(4.4096e+08, -3.14976e+08)
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("3_6uqi0")
+
+[node name="Path 1005" type="Node2D" parent="Map/Map Sprite/Lot 5"]
+position = Vector2(2.55128e+09, -1.35438e+09)
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("3_6uqi0")
+
+[node name="Path 1006" type="Node2D" parent="Map/Map Sprite/Lot 5"]
+position = Vector2(3.16547e+09, -5.82699e+08)
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 6" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-1189.46, -3287.61)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 7" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-441.151, -2348.97)
+scale = Vector2(7.54189e-18, 7.54189e-18)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes129" type="Node2D" parent="Map/Map Sprite/Lot 7" node_paths=PackedStringArray("accessibleNodes")]
+position = Vector2(1.34013e+19, 9.54883e+18)
+scale = Vector2(1.32593e+17, 1.32593e+17)
+script = ExtResource("3_6uqi0")
+accessibleNodes = [NodePath("../../Path Nodes/Path Nodes128"), NodePath("../Path Nodes132")]
+
+[node name="Path Nodes130" type="Node2D" parent="Map/Map Sprite/Lot 7" node_paths=PackedStringArray("accessibleNodes")]
+position = Vector2(-1.13878e+19, 1.76117e+19)
+scale = Vector2(1.32593e+17, 1.32593e+17)
+script = ExtResource("3_6uqi0")
+accessibleNodes = [NodePath("../Path Nodes133"), NodePath("../../Path Nodes/Path Nodes144"), NodePath("../../Path Nodes/Path Nodes131")]
+
+[node name="Path Nodes132" type="Node2D" parent="Map/Map Sprite/Lot 7" node_paths=PackedStringArray("accessibleNodes")]
+position = Vector2(1.95775e+19, 9.12056e+18)
+scale = Vector2(1.32593e+17, 1.32593e+17)
+script = ExtResource("3_6uqi0")
+accessibleNodes = [NodePath("../Path Nodes129"), NodePath("../../Path Nodes/Path Nodes134")]
+
+[node name="Path Nodes133" type="Node2D" parent="Map/Map Sprite/Lot 7" node_paths=PackedStringArray("accessibleNodes")]
+position = Vector2(5.25296e+18, 2.22445e+19)
+scale = Vector2(1.32593e+17, 1.32593e+17)
+script = ExtResource("3_6uqi0")
+accessibleNodes = [NodePath("../Path Nodes130"), NodePath("../../Path Nodes/Path Nodes143"), NodePath("../../Path Nodes/Path Nodes128")]
+
+[node name="Path Nodes190" type="Node2D" parent="Map/Map Sprite/Lot 7"]
+position = Vector2(2.08477e+19, -2.02673e+19)
+scale = Vector2(1.32593e+17, 1.32593e+17)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 8" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-2803.8, -945.238)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 9" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-2321.57, 496.187)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 10" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-2415.01, -2131.4)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 11" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(1154.04, -2211.42)
+scale = Vector2(7.54189e-18, 7.54189e-18)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes205" type="Node2D" parent="Map/Map Sprite/Lot 11"]
+position = Vector2(1.02351e+19, 1.2279e+19)
+scale = Vector2(1.32593e+17, 1.32593e+17)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes206" type="Node2D" parent="Map/Map Sprite/Lot 11"]
+position = Vector2(-6.08436e+18, 1.40723e+19)
+scale = Vector2(1.32593e+17, 1.32593e+17)
+script = ExtResource("3_6uqi0")
+
+[node name="Path 1007" type="Node2D" parent="Map/Map Sprite/Lot 11"]
+position = Vector2(1.35336e+19, -4.09455e+18)
+scale = Vector2(1e+10, 1e+10)
+script = ExtResource("3_6uqi0")
+
+[node name="Path 1008" type="Node2D" parent="Map/Map Sprite/Lot 11"]
+position = Vector2(2.34435e+19, 1.53228e+18)
+scale = Vector2(1, 1)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 12" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(1900.89, -2660.48)
+scale = Vector2(0.004225, 0.004225)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 12 North West" type="Node2D" parent="Map/Map Sprite/Lot 12"]
+position = Vector2(-29277, -22300.1)
+scale = Vector2(0.004225, 0.004225)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 12 North East" type="Node2D" parent="Map/Map Sprite/Lot 12"]
+position = Vector2(-17493.2, -27701)
+scale = Vector2(0.004225, 0.004225)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 12 South East" type="Node2D" parent="Map/Map Sprite/Lot 12"]
+position = Vector2(33589.6, 9989.5)
+scale = Vector2(0.004225, 0.004225)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 20" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-3443.9, -4233.7)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 21" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-3654.93, -2911.28)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 22" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-4681.91, -1078.89)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 23" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(3159.4, -1778.39)
+script = ExtResource("3_6uqi0")
+isDestination = true
+
+[node name="Path Nodes312" type="Node2D" parent="Map/Map Sprite/Lot 23"]
+position = Vector2(139.857, 324.942)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes332" type="Node2D" parent="Map/Map Sprite/Lot 23"]
+position = Vector2(-275.922, 254.391)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 24" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(3859.13, -1585.97)
+script = ExtResource("3_6uqi0")
+isDestination = true
+
+[node name="Path Nodes462" type="Node2D" parent="Map/Map Sprite/Lot 24"]
+position = Vector2(144.082, 347.767)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes463" type="Node2D" parent="Map/Map Sprite/Lot 24"]
+position = Vector2(-7.71048, 303.474)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes464" type="Node2D" parent="Map/Map Sprite/Lot 24"]
+position = Vector2(-416.419, 177.615)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 26" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(3852.18, -161.054)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes317" type="Node2D" parent="Map/Map Sprite/Lot 26"]
+position = Vector2(-74.3953, -272.356)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes318" type="Node2D" parent="Map/Map Sprite/Lot 26"]
+position = Vector2(-54.6875, -327.101)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes319" type="Node2D" parent="Map/Map Sprite/Lot 26"]
+position = Vector2(45.7534, -232.542)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes320" type="Node2D" parent="Map/Map Sprite/Lot 26"]
+position = Vector2(66.3335, -288.956)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes323" type="Node2D" parent="Map/Map Sprite/Lot 26"]
+position = Vector2(348.469, -198.197)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 27" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(3307.17, 252.224)
+scale = Vector2(7.54189e-08, 7.54189e-08)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes481" type="Node2D" parent="Map/Map Sprite/Lot 27"]
+position = Vector2(1.75931e+09, 8.96451e+07)
+scale = Vector2(1.32593e+07, 1.32593e+07)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes482" type="Node2D" parent="Map/Map Sprite/Lot 27"]
+position = Vector2(9.50018e+08, -1.37965e+09)
+scale = Vector2(1.32593e+07, 1.32593e+07)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes486" type="Node2D" parent="Map/Map Sprite/Lot 27"]
+position = Vector2(-2.39701e+09, -1.05775e+08)
+scale = Vector2(1.32593e+07, 1.32593e+07)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 28" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(3133.38, 1149.17)
+scale = Vector2(3.18645e-10, 3.18645e-10)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes471" type="Node2D" parent="Map/Map Sprite/Lot 28"]
+position = Vector2(-4.37239e+11, -3.51516e+11)
+scale = Vector2(3.13829e+09, 3.13829e+09)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes472" type="Node2D" parent="Map/Map Sprite/Lot 28"]
+position = Vector2(2.97397e+11, -2.12467e+11)
+scale = Vector2(3.13829e+09, 3.13829e+09)
+script = ExtResource("3_6uqi0")
+
+[node name="Path Nodes473" type="Node2D" parent="Map/Map Sprite/Lot 28"]
+position = Vector2(6.20824e+11, 3.04171e+10)
+scale = Vector2(3.13829e+09, 3.13829e+09)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 29" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-3841.33, -2179.73)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 30 ???" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-4470.89, -1870.23)
+script = ExtResource("3_6uqi0")
+
+[node name="Lot 31" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-3465.01, -3442.36)
+script = ExtResource("3_6uqi0")
+
+[node name="Admin Drive Garage" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(-205.413, 1792.59)
+script = ExtResource("3_6uqi0")
+
+[node name="Rec Court" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(1470.75, -2604.94)
+script = ExtResource("3_6uqi0")
+
+[node name="UMBC Stadium Complex" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(2759.23, 1700.64)
+script = ExtResource("3_6uqi0")
+
+[node name="Athletic Field" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(1946.99, 2092.5)
+script = ExtResource("3_6uqi0")
+
+[node name="Baseball Field" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(2767.65, 2584.69)
+script = ExtResource("3_6uqi0")
+
+[node name="Softball Field" type="Node2D" parent="Map/Map Sprite"]
+position = Vector2(2214.59, 3222.7)
 script = ExtResource("3_6uqi0")
 
 [node name="Input UI" type="ColorRect" parent="Map"]
