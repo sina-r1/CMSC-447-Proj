@@ -26,8 +26,8 @@ func _ready():
 	
 	background_color.size = screen_res
 	
-	#show_all_connections()
-	pathfind()
+	show_all_connections()
+	#pathfind()
 
 func _input(event):
 	if event is InputEventScreenTouch and event.is_released():
