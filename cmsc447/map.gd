@@ -26,7 +26,8 @@ func _ready():
 	
 	background_color.size = screen_res
 	
-	show_all_connections()
+	#show_all_connections()
+	pathfind()
 
 func _input(event):
 	if event is InputEventScreenTouch and event.is_released():
@@ -64,6 +65,72 @@ func clamp_position():
 	var image_res = map_sprite.texture.get_size()
 	map_sprite.position.x = clampf(map_sprite.position.x, (screen_res.x-image_res.x*map_sprite.scale.x)/2, (screen_res.x+image_res.x*map_sprite.scale.x)/2)
 	map_sprite.position.y = clampf(map_sprite.position.y, (screen_res.y-image_res.y*map_sprite.scale.y)/2, (screen_res.y+image_res.y*map_sprite.scale.y)/2)
+
+func pathfind():
+	var startLocation = $"Map Sprite/FA"
+	var endLocation = $"Map Sprite/RAC"
+	
+	var options = []
+	var visited = []
+	
+	# Initial path options
+	for child in startLocation.get_children():
+		child.pathLength = 0
+		options.append(child)
+		visited.append(child)
+	var currentNode = null
+	
+	# Calculate path
+	while (len(options) > 0 and (currentNode == null or currentNode.get_parent() != endLocation)):
+		# Choose next node with A* algorithm
+		# Actual current path length + linear distance to the End location
+		currentNode = best_choice(options, endLocation)
+		
+		# Add neighboring nodes to options
+		for neighbor in currentNode.accessibleNodes:
+			if visited.count(neighbor) == 0:
+				neighbor.parentNode = currentNode
+				neighbor.pathLength = currentNode.pathLength + (currentNode.global_position - neighbor.global_position).length()
+				options.append(neighbor)
+				visited.append(neighbor)
+		for neighbor in currentNode.nonAccessibleNodes:
+			if visited.count(neighbor) == 0:
+				neighbor.parentNode = currentNode
+				neighbor.pathLength = currentNode.pathLength + (currentNode.global_position - neighbor.global_position).length()
+				options.append(neighbor)
+				visited.append(neighbor)
+		if currentNode.get_parent().isDestination:
+			for child in currentNode.get_parent().get_children():
+				if child.get_script() and visited.count(child) == 0:
+					child.parentNode = currentNode
+					child.pathLength = currentNode.pathLength + (currentNode.global_position - child.global_position).length() + 5 # Extra value to discourage buildings
+					options.append(child)
+					visited.append(child)
+		
+		# Remove node from options
+		options.erase(currentNode)
+	
+	# Report if a path was found
+	if currentNode.get_parent() != endLocation:
+		print("I couldn't find a path.")
+	else:
+		print("I found a path!")
+		display_path(currentNode)
+
+func best_choice(options, goal):
+	if len(options) == 0:
+		return null
+	var best = options[0]
+	for option in options:
+		if (goal.global_position - option.global_position).length() + option.pathLength < (goal.global_position - best.global_position).length() + best.pathLength:
+			best = option
+	return best
+
+func display_path(endNode):
+	var currentNode = endNode
+	while currentNode != null and currentNode.parentNode != null:
+		add_path(currentNode.parentNode, currentNode)
+		currentNode = currentNode.parentNode
 
 func show_all_connections():
 	for child in map_sprite.get_children():

@@ -1323,7 +1323,7 @@ script = ExtResource("3_6uqi0")
 accessibleNodes = [NodePath("../../ITE/ITE East 2"), NodePath("../Path Nodes46"), NodePath("../Path Nodes45")]
 
 [node name="Path Nodes47" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes", "nonAccessibleNodes")]
-position = Vector2(-24.6554, 1627.27)
+position = Vector2(-18.6336, 1623.66)
 script = ExtResource("3_6uqi0")
 accessibleNodes = [NodePath("../Path Nodes46"), NodePath("../Path Nodes27")]
 nonAccessibleNodes = [NodePath("../Path Nodes48"), NodePath("../Path Nodes100")]
@@ -3853,6 +3853,6 @@ bbcode_enabled = true
 text = "[color=black]Accessible?[/color]"
 
 [node name="PathMarker" type="ColorRect" parent="Map"]
-offset_right = 10.0
-offset_bottom = 10.0
+offset_left = -10.0
+offset_top = -10.0
 color = Color(1, 0, 1, 1)
