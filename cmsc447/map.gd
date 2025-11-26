@@ -5,14 +5,19 @@ extends Node2D
 @onready var path_marker: ColorRect = $PathMarker
 
 @onready var background_color = $"Background Color"
-@onready var input_ui: ColorRect = $"Input UI"
 
+@onready var input_ui: ColorRect = $"Input UI"
+@onready var start_input_field: TextEdit = $"Input UI/Start input field"
+@onready var end_input_field: TextEdit = $"Input UI/End input field"
+@onready var accessibility_toggle: Button = $"Input UI/Accessibility Toggle"
 
 var touch_inputs = {}
 
 var screen_res
 var initial_scale_factor
 @export var max_zoom_factor = 20
+
+var paths = []
 
 func _ready():
 	var map_image = load(map_image_path)
@@ -25,9 +30,6 @@ func _ready():
 	map_sprite.scale = Vector2(initial_scale_factor, initial_scale_factor)
 	
 	background_color.size = screen_res
-	
-	show_all_connections()
-	#pathfind()
 
 func _input(event):
 	if event is InputEventScreenTouch and event.is_released():
@@ -66,9 +68,10 @@ func clamp_position():
 	map_sprite.position.x = clampf(map_sprite.position.x, (screen_res.x-image_res.x*map_sprite.scale.x)/2, (screen_res.x+image_res.x*map_sprite.scale.x)/2)
 	map_sprite.position.y = clampf(map_sprite.position.y, (screen_res.y-image_res.y*map_sprite.scale.y)/2, (screen_res.y+image_res.y*map_sprite.scale.y)/2)
 
-func pathfind():
-	var startLocation = $"Map Sprite/FA"
-	var endLocation = $"Map Sprite/RAC"
+func astar(startLocation, endLocation):
+	for path in paths:
+		get_node(path).free()
+	paths.clear()
 	
 	var options = []
 	var visited = []
@@ -93,17 +96,18 @@ func pathfind():
 				neighbor.pathLength = currentNode.pathLength + (currentNode.global_position - neighbor.global_position).length()
 				options.append(neighbor)
 				visited.append(neighbor)
-		for neighbor in currentNode.nonAccessibleNodes:
-			if visited.count(neighbor) == 0:
-				neighbor.parentNode = currentNode
-				neighbor.pathLength = currentNode.pathLength + (currentNode.global_position - neighbor.global_position).length()
-				options.append(neighbor)
-				visited.append(neighbor)
+		if not accessibility_toggle.button_pressed:
+			for neighbor in currentNode.nonAccessibleNodes:
+				if visited.count(neighbor) == 0:
+					neighbor.parentNode = currentNode
+					neighbor.pathLength = currentNode.pathLength + (currentNode.global_position - neighbor.global_position).length()
+					options.append(neighbor)
+					visited.append(neighbor)
 		if currentNode.get_parent().isDestination:
 			for child in currentNode.get_parent().get_children():
 				if child.get_script() and visited.count(child) == 0:
 					child.parentNode = currentNode
-					child.pathLength = currentNode.pathLength + (currentNode.global_position - child.global_position).length() + 5 # Extra value to discourage buildings
+					child.pathLength = currentNode.pathLength + (currentNode.global_position - child.global_position).length() + (5 * (map_sprite.scale.x / initial_scale_factor)) # Extra value to discourage buildings
 					options.append(child)
 					visited.append(child)
 		
@@ -116,6 +120,9 @@ func pathfind():
 	else:
 		print("I found a path!")
 		display_path(currentNode)
+	
+	for node in visited:
+		node.parentNode = null
 
 func best_choice(options, goal):
 	if len(options) == 0:
@@ -132,6 +139,7 @@ func display_path(endNode):
 		add_path(currentNode.parentNode, currentNode)
 		currentNode = currentNode.parentNode
 
+# Remove in final product
 func show_all_connections():
 	for child in map_sprite.get_children():
 		if ("accessibleNodes" in child and child.accessibleNodes.size() > 0):
@@ -151,13 +159,17 @@ func show_all_connections():
 
 func add_path(firstNode, secondNode):
 	if (secondNode != null):
-		var new_path = path_marker.duplicate()
-		new_path.color = Color.RED
-		firstNode.add_child(new_path)
-		new_path.position = Vector2.ZERO
-		new_path.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
-		new_path.size = Vector2((firstNode.global_position - secondNode.global_position).length() / initial_scale_factor, 5)
+		var newPath = path_marker.duplicate()
+		newPath.color = Color.RED
+		firstNode.add_child(newPath)
+		newPath.position = Vector2.ZERO
+		newPath.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
+		newPath.size = Vector2((firstNode.global_position - secondNode.global_position).length() / map_sprite.scale.x, 5)
+		
+		newPath.reparent(map_sprite)
+		paths.append(newPath.get_path())
 
+# Remove in final product
 func add_accessible_path(firstNode, secondNode):
 	if (secondNode != null):
 		var new_path = path_marker.duplicate()
@@ -166,3 +178,23 @@ func add_accessible_path(firstNode, secondNode):
 		new_path.position = Vector2.ZERO
 		new_path.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
 		new_path.size = Vector2((firstNode.global_position - secondNode.global_position).length() / initial_scale_factor, 5)
+
+func _on_submit_pressed() -> void:
+	print(map_sprite.scale.x)
+	
+	var startNodePath = find_destination(start_input_field.text)
+	var endNodePath = find_destination(end_input_field.text)
+	if startNodePath == null:
+		pass
+	if endNodePath == null:
+		pass
+	if startNodePath != null and endNodePath != null:
+		astar(get_node(startNodePath), get_node(endNodePath))
+
+func find_destination(destinationName):
+	for destination in map_sprite.get_children():
+		if destination.get_script() and len(destination.destinationAliases) > 0:
+			for alias in destination.destinationAliases:
+				if alias.to_lower() == destinationName.to_lower():
+					return destination.get_path()
+	return null
