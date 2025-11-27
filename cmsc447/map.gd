@@ -17,6 +17,8 @@ var screen_res
 var initial_scale_factor
 @export var max_zoom_factor = 20
 
+var startLocation
+var endLocation
 var paths = []
 
 func _ready():
@@ -68,12 +70,16 @@ func clamp_position():
 	map_sprite.position.x = clampf(map_sprite.position.x, (screen_res.x-image_res.x*map_sprite.scale.x)/2, (screen_res.x+image_res.x*map_sprite.scale.x)/2)
 	map_sprite.position.y = clampf(map_sprite.position.y, (screen_res.y-image_res.y*map_sprite.scale.y)/2, (screen_res.y+image_res.y*map_sprite.scale.y)/2)
 
-func astar(startLocation, endLocation):
+func astar():
+	# clear previous paths
 	for path in paths:
 		get_node(path).free()
 	paths.clear()
 	
+	# Nodes are removed when visited
 	var options = []
+	
+	# Used to prevent revisiting nodes (to prevent loops)
 	var visited = []
 	
 	# Initial path options
@@ -180,16 +186,20 @@ func add_accessible_path(firstNode, secondNode):
 		new_path.size = Vector2((firstNode.global_position - secondNode.global_position).length() / initial_scale_factor, 5)
 
 func _on_submit_pressed() -> void:
-	print(map_sprite.scale.x)
-	
 	var startNodePath = find_destination(start_input_field.text)
 	var endNodePath = find_destination(end_input_field.text)
-	if startNodePath == null:
-		pass
-	if endNodePath == null:
-		pass
-	if startNodePath != null and endNodePath != null:
-		astar(get_node(startNodePath), get_node(endNodePath))
+	if startNodePath == null and start_input_field.text != "":
+		display_start_error()
+	elif startNodePath != null:
+		startLocation = get_node(startNodePath)
+		display_start_confirm()
+	if endNodePath == null and end_input_field.text != "":
+		display_end_error()
+	elif endNodePath != null:
+		endLocation = get_node(endNodePath)
+		display_end_confirm()
+	if startLocation != null and endLocation != null:
+		astar()
 
 func find_destination(destinationName):
 	for destination in map_sprite.get_children():
@@ -198,3 +208,20 @@ func find_destination(destinationName):
 				if alias.to_lower() == destinationName.to_lower():
 					return destination.get_path()
 	return null
+
+func display_start_error():
+	start_input_field.text = ""
+	start_input_field.placeholder_text = "Invalid Location Name"
+	start_input_field.add_theme_color_override("font_placeholder_color", Color(1.0, 0.0, 0.0, 0.6))
+func display_end_error():
+	end_input_field.text = ""
+	end_input_field.placeholder_text = "Invalid Location Name"
+	end_input_field.add_theme_color_override("font_placeholder_color", Color(1.0, 0.0, 0.0, 0.6))
+func display_start_confirm():
+	start_input_field.text = ""
+	start_input_field.placeholder_text = startLocation.destinationAliases[0]
+	start_input_field.add_theme_color_override("font_placeholder_color", Color(0.0, 1.0, 0.0, 0.6))
+func display_end_confirm():
+	end_input_field.text = ""
+	end_input_field.placeholder_text = endLocation.destinationAliases[0]
+	end_input_field.add_theme_color_override("font_placeholder_color", Color(0.0, 1.0, 0.0, 0.6))

@@ -1168,7 +1168,7 @@ nonAccessibleNodes = [NodePath("../Path Nodes4"), NodePath("../Path Nodes10")]
 [node name="Path Nodes20" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes", "nonAccessibleNodes")]
 position = Vector2(759.96, 2096.42)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../../RAC/RAC North 1"), NodePath("../Path Nodes280")]
+accessibleNodes = [NodePath("../../Retriever Activities Center/RAC North 1"), NodePath("../Path Nodes280")]
 nonAccessibleNodes = [NodePath("../Path Nodes76")]
 
 [node name="Path Nodes21" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
@@ -1516,7 +1516,7 @@ accessibleNodes = [NodePath("../../Admin/Admin East 1"), NodePath("../Path Nodes
 [node name="Path Nodes279" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(627.128, 2269.12)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../../RAC/RAC West 1"), NodePath("../../RAC/RAC North 1"), NodePath("../Path Nodes102"), NodePath("../Path Nodes278"), NodePath("../Path Nodes280")]
+accessibleNodes = [NodePath("../../Retriever Activities Center/RAC West 1"), NodePath("../../Retriever Activities Center/RAC North 1"), NodePath("../Path Nodes102"), NodePath("../Path Nodes278"), NodePath("../Path Nodes280")]
 
 [node name="Path Nodes280" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes", "nonAccessibleNodes")]
 position = Vector2(653.406, 2153.06)
@@ -1527,7 +1527,7 @@ nonAccessibleNodes = [NodePath("../../Sond/Sond South 1")]
 [node name="Path Nodes102" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(625.091, 2362.51)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../../RAC/RAC West 1"), NodePath("../Path Nodes87"), NodePath("../Path Nodes277"), NodePath("../Path Nodes279")]
+accessibleNodes = [NodePath("../../Retriever Activities Center/RAC West 1"), NodePath("../Path Nodes87"), NodePath("../Path Nodes277"), NodePath("../Path Nodes279")]
 
 [node name="Path Nodes90" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(1313.81, 2704.2)
@@ -3121,7 +3121,7 @@ accessibleNodes = [NodePath("../../Path Nodes/Path Nodes48")]
 position = Vector2(-676.923, 200)
 script = ExtResource("3_6uqi0")
 isDestination = true
-destinationAliases = Array[String](["Math & Psychology Building", "Math & Psychology BLDG", "Math", "Psychology", "Math and Psychology Building", "Math and Psychology BLDG", "Math and Psychology", "Math & Psychology", "M/P", "M&P"])
+destinationAliases = Array[String](["Math & Psychology BLDG", "Math & Psychology Building", "Math", "Psychology", "Math and Psychology Building", "Math and Psychology BLDG", "Math and Psychology", "Math & Psychology", "M/P", "M&P"])
 
 [node name="M&P North 1" type="Node2D" parent="Map/Map Sprite/M&P" node_paths=PackedStringArray("nonAccessibleNodes")]
 position = Vector2(17.066, -185.697)
@@ -3138,10 +3138,10 @@ position = Vector2(-91.8827, 192.522)
 script = ExtResource("3_6uqi0")
 accessibleNodes = [NodePath("../../Path Nodes/Path Nodes19")]
 
-[node name="M&P South 2" type="Node2D" parent="Map/Map Sprite/M&P" node_paths=PackedStringArray("nonAccessibleNodes")]
+[node name="M&P South 2" type="Node2D" parent="Map/Map Sprite/M&P" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(-53.5559, 232.61)
 script = ExtResource("3_6uqi0")
-nonAccessibleNodes = [NodePath("../../Path Nodes/Path Nodes1"), NodePath("../../Path Nodes/Path Nodes19")]
+accessibleNodes = [NodePath("../../Path Nodes/Path Nodes1"), NodePath("../../Path Nodes/Path Nodes19")]
 
 [node name="M&P South 1" type="Node2D" parent="Map/Map Sprite/M&P" node_paths=PackedStringArray("nonAccessibleNodes")]
 position = Vector2(16.0814, 208.058)
@@ -3152,7 +3152,7 @@ nonAccessibleNodes = [NodePath("../../Path Nodes/Path Nodes74")]
 position = Vector2(-707.692, 707.692)
 script = ExtResource("3_6uqi0")
 isDestination = true
-destinationAliases = Array[String](["sondheim hall", "sondheim", "sond"])
+destinationAliases = Array[String](["Sondheim Hall", "sondheim", "sond"])
 
 [node name="Sond North 1" type="Node2D" parent="Map/Map Sprite/Sond" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(-0.840313, -163.892)
@@ -3247,7 +3247,7 @@ accessibleNodes = [NodePath("../../Path Nodes/Path Nodes32")]
 position = Vector2(-1600, -323.077)
 script = ExtResource("3_6uqi0")
 isDestination = true
-destinationAliases = Array[String](["fine arts building", "fine arts bldg", "fine arts", "fa", "fine"])
+destinationAliases = Array[String](["Fine Arts BLDG", "fine arts building", "fine arts", "fa", "fine"])
 
 [node name="FA East 1" type="Node2D" parent="Map/Map Sprite/FA" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(128.54, -107.903)
@@ -3447,18 +3447,18 @@ script = ExtResource("3_6uqi0")
 position = Vector2(-9.77067, 104.921)
 script = ExtResource("3_6uqi0")
 
-[node name="RAC" type="Node2D" parent="Map/Map Sprite"]
+[node name="Retriever Activities Center" type="Node2D" parent="Map/Map Sprite"]
 position = Vector2(-601.282, 1178.9)
 script = ExtResource("3_6uqi0")
 isDestination = true
-destinationAliases = Array[String](["retriever activities center", "rac"])
+destinationAliases = Array[String](["Retriever Activities Center", "rac"])
 
-[node name="RAC West 1" type="Node2D" parent="Map/Map Sprite/RAC" node_paths=PackedStringArray("accessibleNodes")]
+[node name="RAC West 1" type="Node2D" parent="Map/Map Sprite/Retriever Activities Center" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(-44.1042, 15.009)
 script = ExtResource("3_6uqi0")
 accessibleNodes = [NodePath("../../Path Nodes/Path Nodes102"), NodePath("../../Path Nodes/Path Nodes279")]
 
-[node name="RAC North 1" type="Node2D" parent="Map/Map Sprite/RAC" node_paths=PackedStringArray("accessibleNodes")]
+[node name="RAC North 1" type="Node2D" parent="Map/Map Sprite/Retriever Activities Center" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(0.441099, -38.1996)
 script = ExtResource("3_6uqi0")
 accessibleNodes = [NodePath("../../Path Nodes/Path Nodes20"), NodePath("../../Path Nodes/Path Nodes279")]
