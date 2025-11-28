@@ -188,14 +188,20 @@ func add_accessible_path(firstNode, secondNode):
 func _on_submit_pressed() -> void:
 	var startNodePath = find_destination(start_input_field.text)
 	var endNodePath = find_destination(end_input_field.text)
-	if startNodePath == null and start_input_field.text != "":
-		display_start_error()
-	elif startNodePath != null:
+	if startNodePath == null:
+		if startLocation == null and start_input_field.text == "":
+			start_input_field.add_theme_color_override("font_placeholder_color", Color(1.0, 0.0, 0.0, 0.6))
+		elif start_input_field.text != "":
+			display_start_error()
+	else:
 		startLocation = get_node(startNodePath)
 		display_start_confirm()
-	if endNodePath == null and end_input_field.text != "":
-		display_end_error()
-	elif endNodePath != null:
+	if endNodePath == null:
+		if endLocation == null and end_input_field.text == "":
+			end_input_field.add_theme_color_override("font_placeholder_color", Color(1.0, 0.0, 0.0, 0.6))
+		elif end_input_field.text != "":
+			display_end_error()
+	else:
 		endLocation = get_node(endNodePath)
 		display_end_confirm()
 	if startLocation != null and endLocation != null:
