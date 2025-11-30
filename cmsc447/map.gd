@@ -32,6 +32,7 @@ func _ready():
 	map_sprite.scale = Vector2(initial_scale_factor, initial_scale_factor)
 	
 	background_color.size = screen_res
+	show_all_connections()
 
 func _input(event):
 	if event is InputEventScreenTouch and event.is_released():
