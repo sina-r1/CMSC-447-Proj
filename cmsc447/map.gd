@@ -32,7 +32,7 @@ func _ready():
 	map_sprite.scale = Vector2(initial_scale_factor, initial_scale_factor)
 	
 	background_color.size = screen_res
-	show_all_connections()
+	#show_all_connections()
 
 func _input(event):
 	if event is InputEventScreenTouch and event.is_released():
@@ -189,26 +189,28 @@ func add_accessible_path(firstNode, secondNode):
 func _on_submit_pressed() -> void:
 	var startNodePath = find_destination(start_input_field.text)
 	var endNodePath = find_destination(end_input_field.text)
-	if startNodePath == null:
-		if startLocation == null and start_input_field.text == "":
-			start_input_field.add_theme_color_override("font_placeholder_color", Color(1.0, 0.0, 0.0, 0.6))
-		elif start_input_field.text != "":
+	if startNodePath == null and (startLocation == null or start_input_field.text != ""):
+		startLocation = null
+		start_input_field.add_theme_color_override("font_placeholder_color", Color(1.0, 0.0, 0.0, 0.6))
+		if start_input_field.text != "":
 			display_start_error()
-	else:
+	elif startNodePath != null:
 		startLocation = get_node(startNodePath)
 		display_start_confirm()
-	if endNodePath == null:
-		if endLocation == null and end_input_field.text == "":
-			end_input_field.add_theme_color_override("font_placeholder_color", Color(1.0, 0.0, 0.0, 0.6))
-		elif end_input_field.text != "":
+	if endNodePath == null and (endLocation == null or end_input_field.text != ""):
+		endLocation == null
+		end_input_field.add_theme_color_override("font_placeholder_color", Color(1.0, 0.0, 0.0, 0.6))
+		if end_input_field.text != "":
 			display_end_error()
-	else:
+	elif endNodePath != null:
 		endLocation = get_node(endNodePath)
 		display_end_confirm()
 	if startLocation != null and endLocation != null:
 		astar()
 
 func find_destination(destinationName):
+	if destinationName == "":
+		return null
 	for destination in map_sprite.get_children():
 		if destination.get_script() and len(destination.destinationAliases) > 0:
 			for alias in destination.destinationAliases:
@@ -232,3 +234,9 @@ func display_end_confirm():
 	end_input_field.text = ""
 	end_input_field.placeholder_text = endLocation.destinationAliases[0]
 	end_input_field.add_theme_color_override("font_placeholder_color", Color(0.0, 1.0, 0.0, 0.6))
+func display_default_start():
+	start_input_field.placeholder_text = "Enter Start location"
+	start_input_field.add_theme_color_override("font_placeholder_color", Color(0.0, 0.0, 0.0, 0.6))
+func display_default_end():
+	end_input_field.placeholder_text = "Enter End location"
+	end_input_field.add_theme_color_override("font_placeholder_color", Color(0.0, 0.0, 0.0, 0.6))

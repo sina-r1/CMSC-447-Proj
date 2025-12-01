@@ -1693,7 +1693,7 @@ accessibleNodes = [NodePath("../Path Nodes150"), NodePath("../Path Nodes302"), N
 [node name="Path Nodes150" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes", "nonAccessibleNodes")]
 position = Vector2(2899.97, 401.443)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../Path Nodes152"), NodePath("../Path Nodes148")]
+accessibleNodes = [NodePath("../Path Nodes148"), NodePath("../Path Nodes151")]
 nonAccessibleNodes = [NodePath("../../Lot 2/Path Nodes149")]
 
 [node name="Path Nodes151" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
@@ -1706,10 +1706,11 @@ position = Vector2(2972.63, 247.673)
 script = ExtResource("3_6uqi0")
 accessibleNodes = [NodePath("../Path Nodes151"), NodePath("../Path Nodes153"), NodePath("../Path Nodes306")]
 
-[node name="Path Nodes153" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
+[node name="Path Nodes153" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes", "nonAccessibleNodes")]
 position = Vector2(2808.85, 245.111)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../../Lot 2/Path Nodes149"), NodePath("../Path Nodes152"), NodePath("../Path Nodes158")]
+accessibleNodes = [NodePath("../Path Nodes152"), NodePath("../Path Nodes158")]
+nonAccessibleNodes = [NodePath("../../Lot 2/Path Nodes149")]
 
 [node name="Path Nodes157" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(2512.34, 77.1694)
@@ -2454,7 +2455,7 @@ accessibleNodes = [NodePath("../Path Nodes462"), NodePath("../Path Nodes466")]
 [node name="Path Nodes321" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes", "nonAccessibleNodes")]
 position = Vector2(3768.6, 512.177)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../Path Nodes331"), NodePath("../Path Nodes320")]
+accessibleNodes = [NodePath("../Path Nodes331"), NodePath("../Path Nodes320"), NodePath("../Path Nodes317")]
 nonAccessibleNodes = [NodePath("../../Lot 3/Path Nodes318")]
 
 [node name="Path Nodes322" type="Node2D" parent="Map/Map Sprite/Path Nodes" node_paths=PackedStringArray("accessibleNodes")]
@@ -4121,7 +4122,7 @@ accessibleNodes = [NodePath("../../Path Nodes/Path Nodes317"), NodePath("../Path
 [node name="Path Nodes316" type="Node2D" parent="Map/Map Sprite/Stadium Lot" node_paths=PackedStringArray("accessibleNodes")]
 position = Vector2(-380.043, 339.056)
 script = ExtResource("3_6uqi0")
-accessibleNodes = [NodePath("../../Path Nodes/Path Nodes317"), NodePath("../../Path Nodes/Path Nodes324"), NodePath("../../Path Nodes/Path Nodes484")]
+accessibleNodes = [NodePath("../../Path Nodes/Path Nodes317"), NodePath("../../Path Nodes/Path Nodes484"), NodePath("../Path Nodes324"), NodePath("../Path Nodes315")]
 
 [node name="Parking Services" type="Node2D" parent="Map/Map Sprite"]
 position = Vector2(-3840.38, -3638.42)
@@ -4642,7 +4643,7 @@ offset_left = 54.317
 offset_top = 34.5132
 offset_right = 307.317
 offset_bottom = 70.5132
-placeholder_text = "Start Location"
+placeholder_text = "Enter Start location"
 
 [node name="End input field" type="TextEdit" parent="Map/Input UI"]
 layout_mode = 0
@@ -4650,7 +4651,7 @@ offset_left = 54.317
 offset_top = 79.1579
 offset_right = 307.317
 offset_bottom = 115.158
-placeholder_text = "End Location"
+placeholder_text = "Enter End location"
 
 [node name="Submit" type="Button" parent="Map/Input UI"]
 layout_mode = 0
