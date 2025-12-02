@@ -95,6 +95,7 @@ func astar():
 		# Choose next node with A* algorithm
 		# Actual current path length + linear distance to the End location
 		currentNode = best_choice(options, endLocation)
+		print(currentNode.name + ", " + currentNode.get_parent().name)
 		
 		# Add neighboring nodes to options
 		for neighbor in currentNode.accessibleNodes:
@@ -110,7 +111,7 @@ func astar():
 					neighbor.pathLength = currentNode.pathLength + (currentNode.global_position - neighbor.global_position).length()
 					options.append(neighbor)
 					visited.append(neighbor)
-		if currentNode.get_parent().isDestination:
+		if currentNode.get_parent().get_script() and currentNode.get_parent().isDestination:
 			for child in currentNode.get_parent().get_children():
 				if child.get_script() and visited.count(child) == 0:
 					child.parentNode = currentNode
@@ -171,7 +172,7 @@ func add_path(firstNode, secondNode):
 		firstNode.add_child(newPath)
 		newPath.position = Vector2.ZERO
 		newPath.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
-		newPath.size = Vector2((firstNode.global_position - secondNode.global_position).length() / map_sprite.scale.x, 5)
+		newPath.size = Vector2((firstNode.global_position - secondNode.global_position).length() / map_sprite.scale.x, 10)
 		
 		newPath.reparent(map_sprite)
 		paths.append(newPath.get_path())
