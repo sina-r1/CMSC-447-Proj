@@ -32,7 +32,7 @@ func _ready():
 	map_sprite.scale = Vector2(initial_scale_factor, initial_scale_factor)
 	
 	background_color.size = screen_res
-	#show_all_connections()
+	show_all_connections()
 
 func _input(event):
 	if event is InputEventScreenTouch and event.is_released():
@@ -172,7 +172,7 @@ func add_path(firstNode, secondNode):
 		firstNode.add_child(newPath)
 		newPath.position = Vector2.ZERO
 		newPath.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
-		newPath.size = Vector2((firstNode.global_position - secondNode.global_position).length() / map_sprite.scale.x, 10)
+		newPath.size = Vector2((firstNode.global_position - secondNode.global_position).length() / map_sprite.scale.x, 5)
 		
 		newPath.reparent(map_sprite)
 		paths.append(newPath.get_path())
