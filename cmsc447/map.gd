@@ -21,6 +21,8 @@ var startLocation
 var endLocation
 var paths = []
 
+var debug = ""
+
 func _ready():
 	var map_image = load(map_image_path)
 	map_sprite.texture = map_image
@@ -32,7 +34,6 @@ func _ready():
 	map_sprite.scale = Vector2(initial_scale_factor, initial_scale_factor)
 	
 	background_color.size = screen_res
-	show_all_connections()
 
 func _input(event):
 	if event is InputEventScreenTouch and event.is_released():
@@ -95,7 +96,7 @@ func astar():
 		# Choose next node with A* algorithm
 		# Actual current path length + linear distance to the End location
 		currentNode = best_choice(options, endLocation)
-		print(currentNode.name + ", " + currentNode.get_parent().name)
+		debug = (currentNode.name + ", " + currentNode.get_parent().name)
 		
 		# Add neighboring nodes to options
 		for neighbor in currentNode.accessibleNodes:
@@ -124,9 +125,8 @@ func astar():
 	
 	# Report if a path was found
 	if currentNode.get_parent() != endLocation:
-		print("I couldn't find a path.")
+		print("NO PATH FOUND: ", startLocation.name, ", ", endLocation.name)
 	else:
-		print("I found a path!")
 		display_path(currentNode)
 	
 	for node in visited:
@@ -174,7 +174,7 @@ func add_path(firstNode, secondNode):
 		newPath.rotation = (firstNode.global_position - secondNode.global_position).angle() + PI
 		newPath.size = Vector2((firstNode.global_position - secondNode.global_position).length() / map_sprite.scale.x, 5)
 		
-		newPath.reparent(map_sprite)
+		newPath.reparent($"Map Sprite/[path holder]")
 		paths.append(newPath.get_path())
 
 # Remove in final product
